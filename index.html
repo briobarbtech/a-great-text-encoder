@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="styles/reset.css">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <title>Encriptador de mensajes genial</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="title">
+                <h1><img src="img/icon-logo.png" alt="logo del encriptador genial" width="100%">¡Un encriptador de mensajes genial!</h1>
+            </div>
+        </header>
+        <main>
+            <section class="ingreso-mensaje">
+                <form>
+                    <label for="cajaTexto">Ingrese el mensaje aqui: </label>
+                    <input class= "caja-texto" id="cajaTexto">
+                </form>
+            </section>
+
+
+            <section class="botones">
+                <button class="boton-accion" id="encriptar">Encriptar</button>
+                <button class="boton-accion" id="desencriptar">Desencriptar</button>
+            </section>
+
+
+            <section class="caja" id="caja-resultado">
+                <div class="caja-mensaje">
+                    <p id="resultado">Aquí aparecerá el mensaje encriptado</p>
+                </div>
+            </section>
+
+
+            <section class="caja-botones2">
+                <button class="boton-accion" id="botonCopiar" onclick="copyToClickBoard()">Copy</button>
+            </section>
+
+
+            <div class="cuerpo">
+                <img class="imagen-ONE-challenge" src="img/ONE_logo.png" alt="imagen del challenge ONE">
+            </div>
+
+
+            <section class="contacto">
+                <div class="redes-sociales">
+                    <p>Contacto:</p>
+                    <a href="https://www.instagram.com/briobarbtech/"><img id="Instagram" src="img/logoIG.png" class="img-social" alt="icono Instagram"> Instagram</a>
+                    <a href="https://www.linkedin.com/in/brian-barquesi-6b583222b/"><img id="LinkedIn" src="img/logoLk.png" class="img-social" alt="icono LinkedIn"> LinkedIn</a>
+                    <a href="https://github.com/briobarbtech"><img id="Git Hub" src="img/logoGH.png" class="img-social" alt="icono Github"> Git Hub</a>
+                    <a href="mailto:barquesi.tech@gmail.com"><img src="img/logoEmail.png" class="img-social" alt="icono Gmail"> barquesi.tech@gmail.com</a>
+                </div>
+            </section>
+        
+       </main>
+
+        <footer class=caja-pie-pagina>
+            <div class="pie-pagina">
+                <p> Autor: Brian Barquesi</p> 
+                <br>
+                <a href='https://www.freepik.es/vectores/fondo'>Vector de Fondo creado por rawpixel.com - www.freepik.es</a>
+            </div>
+        </footer>
+    </body>
+    <script src="js/main.js"></script>
+    <script src="js/encriptar.js"></script>
+    <script src="js/desencriptar.js"></script>
+    <script src="js/verificarMayus.js"></script>
+
+
+</html>
