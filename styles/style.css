@@ -218,6 +218,6 @@ form label{
     }
     .caja-pie-pagina{
         width: 100%;
-        position:absolute;
+        position:relative;
     }
 }
