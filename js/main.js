@@ -6,16 +6,15 @@ var resultado = document.getElementById("resultado");
 
 
 
-encriptarButton.onclick = function() {
-    //console.log("Encriptando!!!!!")
+encriptarButton.addEventListener(,'click',(event) => {
+    event.defaultPrevented
     encriptarMensaje(mensaje)
-}
+})
 var desencriptarButton = document.getElementById("desencriptar");
-desencriptarButton.onclick = function(){
-    //console.log("Desencriptandoooo!!!!")
+desencriptarButton.addEventListener('click', (event)=>{
+    event.defaultPrevented
     desencriptar(mensaje);
-    
-}
+})
 
 var copiarButton = document.getElementById("botonCopiar");
 copiarButton.onclick = copyToClickBoard;
