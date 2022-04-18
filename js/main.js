@@ -7,17 +7,21 @@ var resultado = document.getElementById("resultado");
 
 
 encriptarButton.addEventListener('click',(event) => {
-    event.defaultPrevented
+    event.defaultPrevented()
     encriptarMensaje(mensaje)
 })
 var desencriptarButton = document.getElementById("desencriptar");
 desencriptarButton.addEventListener('click', (event)=>{
-    event.defaultPrevented
+    event.defaultPrevented()
     desencriptar(mensaje);
 })
 
 var copiarButton = document.getElementById("botonCopiar");
-copiarButton.onclick = copyToClickBoard;
+copiarButton.addEventListener('click',(event)=>{ 
+    event.defaultPrevented
+    copyToClickBoard();
+
+});
 
 
 function copyToClickBoard(){
