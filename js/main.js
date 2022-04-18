@@ -6,7 +6,7 @@ var resultado = document.getElementById("resultado");
 
 
 
-encriptarButton.addEventListener(,'click',(event) => {
+encriptarButton.addEventListener('click',(event) => {
     event.defaultPrevented
     encriptarMensaje(mensaje)
 })
