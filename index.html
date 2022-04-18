@@ -17,14 +17,15 @@
         </header>
         <main>
             <section class="encriptador">
+                <span id="aviso" class="aviso hidden">Debe tener solo letras minúsculas y no deben ser utilizados letras con acentos ni caracteres especiales</span>
                 <form>
                     <label for="cajaTexto">Ingrese el mensaje aqui: </label>
-                    <input class= "caja-texto" id="cajaTexto">
+                    <input type="text" name="mensaje" class= "caja-texto" id="cajaTexto" required>
                     <p class="caja-mensaje" id="resultado">Aquí aparecerá el mensaje encriptado</p> 
                     <section class="botones">
-                        <button class="boton-submit" id="encriptar">Encriptar</button>
-                        <button class="boton-submit" id="desencriptar">Desencriptar</button>
-                        <button class="boton-submit" id="botonCopiar" onclick="copyToClickBoard()">Copy</button>
+                        <button type="submit" class="boton-submit" id="encriptar">Encriptar</button>
+                        <button type="submit" class="boton-submit" id="desencriptar">Desencriptar</button>
+                        <button class="boton-submit" id="botonCopiar">Copy</button>
                     </section>        
                 </form>
                 
@@ -35,7 +36,7 @@
             <section class="contacto">
                 <p>Contacto:</p>
                 <div class="redes-sociales">
-                    <a href="https://www.instagram.com/briobarbtech/"><img id="Instagram" src="img/logoIG.png" class="img-social" alt="icono Instagram"><p>Instagram</p></a>
+                    <a href="https://www.instagram.com/barquesi.tech/"><img id="Instagram" src="img/logoIG.png" class="img-social" alt="icono Instagram"><p>Instagram</p></a>
                     <a href="https://www.linkedin.com/in/brian-barquesi-6b583222b/"><img id="LinkedIn" src="img/logoLk.png" class="img-social" alt="icono LinkedIn"><p>LinkedIn</p></a>
                     <a href="https://github.com/briobarbtech"><img id="Git Hub" src="img/logoGH.png" class="img-social" alt="icono Github"><p>Git Hub</p></a>
                     <a href="mailto:barquesi.tech@gmail.com"><img src="img/logoEmail.png" class="img-social" alt="icono Gmail"><p>Email</p></a>
@@ -51,10 +52,8 @@
             </div>
         </footer>
     </body>
-    <script src="js/main.js"></script>
-    <script src="js/encriptar.js"></script>
-    <script src="js/desencriptar.js"></script>
-    <script src="js/verificarMayus.js"></script>
+    <script type="module" src="js/main.js"></script>
+
 
 
 </html>
