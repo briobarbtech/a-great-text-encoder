@@ -42,7 +42,7 @@ function desencriptarMensaje(mensaje){
 function validarInput(input){
     var aviso = document.querySelector('#aviso');
     if (input.validity.valueMissing == true) {
-        aviso.innerHTML = 'Debe tener solo letras minúsculas y no deben ser utilizados letras con acentos ni caracteres especiales';
+        aviso.innerHTML = 'No puede estar vacío, debe tener solo letras minúsculas y no deben ser utilizados letras con acentos ni caracteres especiales';
         aviso.classList.remove('hidden')
         setTimeout(()=>{
             aviso.classList.add('hidden')
