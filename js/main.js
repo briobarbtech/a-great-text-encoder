@@ -1,4 +1,5 @@
 import { funciones } from "./functions.js";
+const ventana = document.querySelector('body')
 var mensaje = document.getElementById("cajaTexto");
 const encriptarButton = document.getElementById("encriptar");
 const desencriptarButton = document.getElementById("desencriptar");
@@ -10,33 +11,22 @@ var resultado = document.getElementById("resultado");
 
 encriptarButton.onclick = function(event) {
     event.preventDefault();
-    var aviso = document.querySelector('#aviso');
-    if (mensaje.validity.valueMissing == true) {
-        aviso.innerHTML = 'Debe tener solo letras minúsculas y no deben ser utilizados letras con acentos ni caracteres especiales';
-        aviso.classList.remove('hidden')
-        setTimeout(()=>{
-            aviso.classList.add('hidden')
-        },4000)
-    }
-    else{
-        aviso.classList.add('hidden')
+    if (funciones.validarInput(mensaje)) {
         funciones.encriptarMensaje(mensaje);
     }
 
-    mensaje.focus();
+    if (ventana.clientWidth > 480){
+        mensaje.focus();
+    }
 }
 
 desencriptarButton.onclick = function(event){
     event.preventDefault();
-    var message = mensaje.value
-    if (message == "") {
-        console.log(mensaje.validity)
-    }
-    else{
-        funciones.desencriptarMensaje(mensaje);
-    }
+    funciones.desencriptarMensaje(mensaje);
 
-    mensaje.focus();
+    if (ventana.clientWidth > 480){
+        mensaje.focus();
+    }
 }
 
 copiarButton.addEventListener('click', function copyToClickBoard(event){

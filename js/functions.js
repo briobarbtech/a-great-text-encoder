@@ -40,8 +40,18 @@ function desencriptarMensaje(mensaje){
     encriptacion.innerHTML = str;
 }
 function validarInput(input){
-    const aviso = 'Debe tener solo letras minúsculas y no deben ser utilizados letras con acentos ni caracteres especiales';
-    input.setCustomValidity(aviso)
+    var aviso = document.querySelector('#aviso');
+    if (input.validity.valueMissing == true) {
+        aviso.innerHTML = 'Debe tener solo letras minúsculas y no deben ser utilizados letras con acentos ni caracteres especiales';
+        aviso.classList.remove('hidden')
+        setTimeout(()=>{
+            aviso.classList.add('hidden')
+        },4000)
+    }
+    else{
+        aviso.classList.add('hidden')
+        return true;
+    }
 }
 
 export const funciones = {
